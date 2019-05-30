@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Cheese, Flour, Shrimp, Seafood -->
+  <RecipeDef>
+    <defName>ProperMeal_CookCheese</defName>
+    <label>make cheese from milk</label>
+    <description>Cook and curdle some milk until it becomes delicious hard cheese.</description>
+	<jobString>Making cheese.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+	<workSkill>Cooking</workSkill>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+	<recipeUsers>
+	    <li>FueledStove</li>
+        <li>ElectricStove</li>
+    </recipeUsers>
+	<ingredients>
+	  <li>
+		<filter>
+			<thingDefs>
+				<li>Milk</li>
+			</thingDefs>
+		</filter>
+		<count>3.5</count>
+	  </li>
+	</ingredients>
+	<products>
+		<IAmHungry_Cheese>5</IAmHungry_Cheese>
+	</products>
+	<fixedIngredientFilter Inherit="False">
+		<thingDefs>
+			<li>Milk</li>
+		</thingDefs>
+	</fixedIngredientFilter>
+	<defaultIngredientFilter Inherit="False">
+		<thingDefs>
+			<li>Milk</li>
+		</thingDefs>
+	</defaultIngredientFilter>
+    <skillRequirements>
+		<Cooking>6</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>NutrientPaste</researchPrerequisite>
+  </RecipeDef>
+
+  <!-- RWF, RC1, VGP GG -->
+  <RecipeDef>
+    <defName>ProperMeal_GrindFlour</defName>
+    <label>make flour from grains</label>
+    <description>Grind grains into flour, which can be processed further.</description>
+	<jobString>Grinding grains.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+	<workSkill>Cooking</workSkill>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+	<recipeUsers>
+		<li>Millstone</li>
+	</recipeUsers>
+	<ingredients>
+	  <li>
+		<filter>
+			<thingDefs>
+				<li>IAmHungry_RawWheat</li>
+				<li>RawCorn</li>
+				<li>RawRice</li>
+			</thingDefs>
+		</filter>
+		<count>5</count>
+	  </li>
+	</ingredients>
+	<products>
+		<IAmHungry_Flour>5</IAmHungry_Flour>
+	</products>
+	<fixedIngredientFilter>
+		<thingDefs>
+			<li>IAmHungry_RawWheat</li>
+			<li>RawCorn</li>
+			<li>RawRice</li>
+		</thingDefs>
+	</fixedIngredientFilter>
+	<defaultIngredientFilter>
+		<thingDefs>
+			<li>IAmHungry_RawWheat</li>
+			<li>RawCorn</li>
+			<li>RawRice</li>
+		</thingDefs>
+	</defaultIngredientFilter>
+    <skillRequirements>
+		<Cooking>3</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>Pemmican</researchPrerequisite> <!-- Research -->
+  </RecipeDef>
+
+  <!-- Popcorn # Patch -->
+  <RecipeDef>
+    <defName>ProperMeal_Popcorn</defName>
+    <label>make popcorn</label>
+    <description>Heat up some corn, until its outstanding fluffy.</description>
+	<jobString>Making Popcorn.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+	<workSkill>Cooking</workSkill>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+	<recipeUsers>
+		<li>Campfire</li>
+		<li>Trunken_Campfire</li>
+		<li>Bakery</li>
+	    <li>FueledStove</li>
+        <li>ElectricStove</li>
+    </recipeUsers>
+	<ingredients>
+	  <li>
+		<filter>
+			<thingDefs>
+				<li>RawCorn</li>
+			</thingDefs>
+		</filter>
+		<count>1.5</count>
+	  </li>
+	</ingredients>
+	<products>
+		<IAmHungry_Popcorn>5</IAmHungry_Popcorn>
+	</products>
+	<fixedIngredientFilter Inherit="False">
+		<thingDefs>
+			<li>RawCorn</li>
+		</thingDefs>
+	</fixedIngredientFilter>
+	<defaultIngredientFilter Inherit="False">
+		<thingDefs>
+			<li>RawCorn</li>
+		</thingDefs>
+	</defaultIngredientFilter>
+    <skillRequirements>
+		<Cooking>5</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>NutrientPaste</researchPrerequisite>
+  </RecipeDef>
+
+  <!-- YUMMY Shrimps -->
+  <RecipeDef>
+    <defName>ProperMeal_CookShrimp</defName>
+    <label>grill shrimps</label>
+    <description>Grill some selected shrimps with great flavor.</description>
+	<jobString>Making shrimp.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+	<workSkill>Cooking</workSkill>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+	<recipeUsers>
+		<li>Campfire</li>
+	    <li>FueledStove</li>
+        <li>ElectricStove</li>
+    </recipeUsers>
+	<ingredients>
+	  <li>
+		<filter>
+			<thingDefs>
+				<li>Meat_Boomalope</li>
+			</thingDefs>
+		</filter>
+		<count>5</count>
+	  </li>
+	</ingredients>
+	<products>
+		<IAmHungry_Shrimp>5</IAmHungry_Shrimp>
+	</products>
+	<fixedIngredientFilter>
+		<categories>
+			<li>MeatRaw</li>
+		</categories>
+	</fixedIngredientFilter>
+	<defaultIngredientFilter>
+		<categories>
+			<li>MeatRaw</li>
+		</categories>
+	</defaultIngredientFilter>
+    <skillRequirements>
+		<Cooking>10</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>PassiveCooler</researchPrerequisite>
+  </RecipeDef>
+
+  <!-- YUMMY Fish Filet -->
+  <RecipeDef>
+    <defName>ProperMeal_CookSalmon</defName>
+    <label>cook seafood</label>
+    <description>Cook some fish filets with great flavor.</description>
+	<jobString>Making seafood.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+	<workSkill>Cooking</workSkill>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+	<recipeUsers>
+		<li>Campfire</li>
+	    <li>FueledStove</li>
+        <li>ElectricStove</li>
+    </recipeUsers>
+	<ingredients>
+	  <li>
+		<filter>
+			<thingDefs>
+				<li>Meat_Boomalope</li>
+			</thingDefs>
+		</filter>
+		<count>5</count>
+	  </li>
+	</ingredients>
+	<products>
+		<IAmHungry_Salmon>5</IAmHungry_Salmon>
+	</products>
+	<fixedIngredientFilter>
+		<categories>
+			<li>MeatRaw</li>
+		</categories>
+	</fixedIngredientFilter>
+	<defaultIngredientFilter>
+		<categories>
+			<li>MeatRaw</li>
+		</categories>
+	</defaultIngredientFilter>
+    <skillRequirements>
+		<Cooking>16</Cooking>
+    </skillRequirements>
+    <researchPrerequisite>PassiveCooler</researchPrerequisite>
+  </RecipeDef>
+
+</Defs>

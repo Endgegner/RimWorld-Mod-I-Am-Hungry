@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ModMetaData>
+	<name>I Am Hungry</name>
+	<author>Trunken</author>
+	<supportedVersions>
+		<li>1.0</li>
+	</supportedVersions>
+	<description>
+&lt;b&gt;&lt;color=#a4e94a&gt;Yummy!&lt;/color&gt;&lt;/b&gt;
+
+Vanilla friendly food with unique thoughts and tastes in a simplistic way.
+
+- Adds a stove with oven to cook (gloomy style)
+- Adds a campfire to cook (lasting &amp; warm)
+- Adds 12 recipes with different taste/effect
+- Adds 2 different kinds of processable plants to harvest
+
+&lt;b&gt;Overview:&lt;/b&gt;
+
+- Delicious Food (Tastes)
+- Proper Meals (Thoughts+Hediffs)
+- Meat Preservation (Treatment)
+- Milk Preservation (Cheese)
+- Corn Preservation (Flour+Bread)
+- Mood Buffs while traveling (Caravans)
+- Uses Vanilla Researches
+- Wild and beautiful landscape
+- Counters the world hunger
+
+Applyable to all the playstyles: Medieval Castle, Barbarian Warlords, Crashlanded, Survival in the Wild, New Hope and Citybuilding. All the Meals will fit and have a universal texture.
+
+Great Synergy with Thanks For All The Fish (Recommended)
+
+Supports RimCuisine, Gloomy Furniture &amp; Extra Kitchen!
+Works Hand in Hand with Rimstro, RealWorldFood, and VGP!
+Start at zero and learn how to cook, especially with Amnesia or Tech Primitives!
+
+&lt;b&gt;&lt;color=#ffe82a&gt;Compatibility&lt;/color&gt; &amp; &lt;color=#dd3f32&gt;Loadorder:&lt;/color&gt;&lt;/b&gt;
+1. Vegetarians
+2. Vanilla (Core only)
+3. Gloomy Furniture
+4. Gloomy Extra Kitchen
+5. VGP Vegetable Garden
+6. VGP Garden Gourmet (Don't mix VGP and RimCuisine)
+7. Thanks For All The Fish
+8. RimCuisine
+9. Rimstro
+10. Real World Food
+11. Dianne's Food and Newmilk
+12. Amnesia or Tech Primitives
+13. Proper Meals: I Am Hungry &lt;b&gt;(load it here)&lt;/b&gt;
+14. Gloomy Vanilla (load this after)
+15. Savegames
+
+Included Patches are interactive and react to user decisions. Mods will only be combined, when found. Just load I Am Hungry after your other Food Mods to let it do its work. Prime example for a mod which makes use of all features and possibilities given by other mods in its category. This mod supports every food mod out there!
+
+&lt;b&gt;Artists&lt;/b&gt;
+8 (!) Food Textures * by Evaine
+Wheat &amp; Flour * by Crustypeanut
+Milk * by AmIkoLo &amp; gopeuni
+Popcorn * by Latki &amp; Lepple
+ 
+Living Mods * by Trunken
+	</description>
+</ModMetaData>

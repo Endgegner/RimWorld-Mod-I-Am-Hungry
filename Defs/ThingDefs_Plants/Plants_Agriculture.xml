@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- Crops -->
+  <ThingDef ParentName="PlantBase">
+		<defName>IAmHungry_PlantWheat</defName>
+		<label>wheat</label>
+		<description>A widely grown crop processed by millers into flour, which on other hand is used by bakers and confectioners for their delicious goods.\n\nCereal grain is a real world staple.</description>
+		<statBases>
+			<MaxHitPoints>125</MaxHitPoints>
+			<Nutrition>0.35</Nutrition>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Plant/WheatPlant</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<selectable>true</selectable>
+		<pathCost>11</pathCost>
+		<ingestible />
+		<plant>
+			<fertilityMin>0.7</fertilityMin>
+			<dieIfLeafless>true</dieIfLeafless>
+			<sowMinSkill>8</sowMinSkill>
+			<sowWork>350</sowWork>
+			<harvestWork>350</harvestWork>
+			<harvestTag>Standard</harvestTag>
+			<harvestMinGrowth>0.75</harvestMinGrowth>
+			<harvestedThingDef>IAmHungry_RawWheat</harvestedThingDef>
+			<harvestYield>24</harvestYield>
+			<sowTags>
+				<li>Ground</li>
+			</sowTags>
+			<growDays>5</growDays>
+			<immatureGraphicPath>Things/Plant/WheatPlant_Immature</immatureGraphicPath>
+			<visualSizeRange>
+			  <min>0.3</min>
+			  <max>1.1</max>
+			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>TreeSowing</li>
+			</sowResearchPrerequisites>
+			<topWindExposure>0.1</topWindExposure>
+			<purpose>Food</purpose>
+		</plant>
+	</ThingDef>
+
+<ThingDef ParentName="PlantBase">
+    <defName>IAmHungry_PlantWildWheat</defName>
+    <label>wildgrowth</label>
+    <description>A widely grown crop processed by millers into flour, which on the other hand, is used by bakers and confectioners for their delicious goods.</description>
+    <statBases>
+		<Beauty>1</Beauty>
+		<MaxHitPoints>125</MaxHitPoints>
+		<Nutrition>0.35</Nutrition>
+    </statBases>
+    <graphicData>
+		<texPath>Things/Plant/WheatPlantWild</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>10</pathCost>
+    <ingestible />
+    <plant>
+	  <fertilitySensitivity>1.0</fertilitySensitivity>
+	  <fertilityMin>0.7</fertilityMin>
+      <growDays>6</growDays>
+      <immatureGraphicPath>Things/Plant/WheatPlantWild_Immature</immatureGraphicPath>
+      <dieIfLeafless>true</dieIfLeafless>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>IAmHungry_RawWheat</harvestedThingDef>
+	<harvestMinGrowth>0.75</harvestMinGrowth>
+      <harvestYield>32</harvestYield>
+      <sowTags>
+        <li>Hydroponic</li>
+      </sowTags>
+      <sowMinSkill>3</sowMinSkill>
+      <sowResearchPrerequisites>
+        <li>Hydroponics</li>
+      </sowResearchPrerequisites>
+      <topWindExposure>0.1</topWindExposure>
+	  <wildClusterWeight>10</wildClusterWeight>
+	  <wildClusterRadius>20</wildClusterRadius>
+	  <wildOrder>2</wildOrder>
+	  <wildBiomes>
+		<BorealForest>0.20</BorealForest>
+		<TropicalRainforest>0.15</TropicalRainforest>
+		<TemperateForest>0.25</TemperateForest>
+		<TemperateSwamp>0.05</TemperateSwamp>
+		<TropicalSwamp>0.10</TropicalSwamp>
+		<Desert>0.02</Desert>
+	  </wildBiomes>
+      <visualSizeRange>
+        <min>0.3</min>
+        <max>1.0</max>
+      </visualSizeRange>
+    </plant>
+  </ThingDef>
+
+
+</Defs>

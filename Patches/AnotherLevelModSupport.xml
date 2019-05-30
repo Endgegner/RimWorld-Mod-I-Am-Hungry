@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  
+  <!-- Mod Support Thanks For All The Fish -->
+  <Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>[1.0] Thanks For All The Fish</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName="ProperMeal_CookShrimp"]/ingredients/li/filter/thingDefs</xpath>
+				<value>
+					<thingDefs>
+						<li>DeadFish</li>
+					</thingDefs>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName="ProperMeal_CookShrimp"]/fixedIngredientFilter/categories</xpath>
+				<value>
+					<categories>
+						<li>CorpsesFish</li>
+					</categories>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName="ProperMeal_CookShrimp"]/ingredients/li/filter/thingDefs</xpath>
+				<value>
+					<categories>
+						<li>CorpsesFish</li>
+					</categories>
+				</value>
+			</li>
+		</operations>
+	</match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>[1.0] Thanks For All The Fish</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName="ProperMeal_CookSalmon"]/ingredients/li/filter/thingDefs</xpath>
+				<value>
+					<thingDefs>
+						<li>DeadFish</li>
+					</thingDefs>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName="ProperMeal_CookSalmon"]/fixedIngredientFilter/categories</xpath>
+				<value>
+					<categories>
+						<li>CorpsesFish</li>
+					</categories>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName="ProperMeal_CookSalmon"]/ingredients/li/filter/thingDefs</xpath>
+				<value>
+					<categories>
+						<li>CorpsesFish</li>
+					</categories>
+				</value>
+			</li>
+		</operations>
+	</match>
+  </Operation>
+
+  <!-- Mod Support for Gloomy Furniture -->
+  <Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>GloomyFurniture</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationConditional">
+			<xpath>/Defs/ThingDef[defName="Bakery"]/comps/li[@Class="CompProperties_AffectedByFacilities"]</xpath>
+				<nomatch Class="PatchOperationAdd">
+				<xpath>*/ThingDef[defName="Bakery"]/comps</xpath>
+					<value>
+							<li Class="CompProperties_AffectedByFacilities">
+								<linkableFacilities>
+									<li>GL_Cupboard</li>
+									<li>GL_TablewareShelf</li>
+								</linkableFacilities>
+							</li>
+					</value>
+				</nomatch>
+				<match Class="PatchOperationAdd">
+				<xpath>*/ThingDef[defName="Bakery"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+					<value>
+						<li>GL_Cupboard</li>
+						<li>GL_TablewareShelf</li>
+					</value>
+				</match>	
+			</li>
+		</operations>
+	</match>
+  </Operation>
+
+  <!-- GF Category Smart -->
+  <Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>Gloomy Vanilla</li>
+	</mods>
+	<nomatch Class="PatchOperationFindMod">
+		<mods>
+			<li>GloomyFurniture</li>
+		</mods>
+		<success>Always</success>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="Bakery" or defName="Trunken_Campfire" or defName="Millstone"]/designationCategory</xpath>
+			<value>
+				<designationCategory>OldStyleFurniture</designationCategory>
+			</value>
+		</match>
+	</nomatch>
+  </Operation>
+
+  <!-- Gloomy Furniture Cooking Places -->
+  <Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>GloomyFurniture</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName="CookMealComplete" or defName="CookMealExquisite" or defName="LunchPack_MealSurvival" or defName="ProperMeal_CookCheese" or defName="ProperMeal_Knuckle" or defName="ProperMeal_Haunch" or defName="ProperMeal_Steak" or defName="ProperMeal_CookShrimp" or defName="ProperMeal_CookSalmon"]/recipeUsers</xpath>
+				<value>
+						<li>RGK_FueledStove</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName="CookMealComplete" or defName="CookMealExquisite" or defName="LunchPack_MealSurvival" or defName="ProperMeal_CookCheese" or defName="ProperMeal_Knuckle" or defName="ProperMeal_Haunch" or defName="ProperMeal_Steak" or defName="ProperMeal_CookShrimp" or defName="ProperMeal_CookSalmon"]/recipeUsers</xpath>
+				<value>
+						<li>GL_ElectricStove</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName="ProperMeal_CookCheese" or defName="ProperMeal_Knuckle" or defName="ProperMeal_Haunch" or defName="ProperMeal_CookSalmon"]/recipeUsers</xpath>
+				<value>
+						<li>GL_Bonfire</li>
+				</value>
+			</li>
+		</operations>
+	</match>
+  </Operation>
+
+  <!-- Mod Support for Gloomy Extra Kitchen -->
+  <Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>Gloomy Extra - Kitchen</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationConditional">
+			<xpath>/Defs/ThingDef[defName="Bakery"]/comps/li[@Class="CompProperties_AffectedByFacilities"]</xpath>
+				<nomatch Class="PatchOperationAdd">
+				<xpath>*/ThingDef[defName="Bakery"]/comps</xpath>
+					<value>
+							<li Class="CompProperties_AffectedByFacilities">
+								<linkableFacilities>
+									<li>SM_Sink</li>
+									<li>SM_KitchenCupboard_A</li>
+									<li>SM_KitchenCupboard_B</li>
+									<li>SM_KitchenCupboard_C</li>
+								</linkableFacilities>
+							</li>
+					</value>
+				</nomatch>
+				<match Class="PatchOperationAdd">
+				<xpath>*/ThingDef[defName="Bakery"]/comps/li[@Class="CompProperties_AffectedByFacilities"]/linkableFacilities</xpath>
+					<value>
+							<li>SM_Sink</li>
+							<li>SM_KitchenCupboard_A</li>
+							<li>SM_KitchenCupboard_B</li>
+							<li>SM_KitchenCupboard_C</li>
+					</value>
+				</match>	
+			</li>
+		</operations>
+	</match>
+  </Operation>
+  
+  <!-- Mod Support for RimCuisine 1 -->
+  <Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>RimCuisine 1.0</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName="IAmHungry_PlantWheat"]</xpath>
+			</li>
+		</operations>
+	</match>
+  </Operation>
+
+  <!-- RC1 Grinding -->
+  <Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>RimCuisine 1.0</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName="ProperMeal_GrindFlour"]/recipeUsers</xpath>
+				<value>
+					<li>RC_Quernstone</li>
+					<li>RC_RollerMill</li>
+				</value>
+			</li>
+		</operations>
+	</match>
+  </Operation>
+
+  <!-- RC1 Millstone -->
+  <Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>RimCuisine 1.0</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName="Millstone"]</xpath>
+				<value>
+					<recipes>
+						<li>ProcessSugarcane</li>
+						<li>ProcessSugarcaneBulk</li>
+						<li>ProcessGrain</li>
+						<li>ProcessGrainBulk</li>
+					</recipes>
+				</value>
+			</li>
+		</operations>
+	</match>
+  </Operation>
+
+  <!-- RC1 More Ingredients -->
+  <Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>RimCuisine 1.0</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName="ProperMeal_GrindFlour"]/ingredients/li/filter/thingDefs</xpath>
+				<value>
+					<li>RawWheat</li>
+					<li>RawOats</li>
+					<li>RawBarley</li>
+				</value>
+			</li>
+		</operations>
+	</match>
+  </Operation>
+
+  <!-- RC1 Flour -->
+  <Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>RimCuisine 1.0</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName="ProperMeal_GrindFlour"]/defaultIngredientFilter</xpath>
+				<value>
+					<disallowedCategories>
+						<li>FoodProcessed</li>
+					</disallowedCategories>
+					<disallowedThingDefs>
+						<li>Flour</li>
+					</disallowedThingDefs>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName="ProperMeal_GrindFlour"]/label</xpath>
+				<value>
+					<label>make fine flour</label>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="IAmHungry_Flour"]/label</xpath>
+				<value>
+					<label>fine flour</label>
+				</value>
+			</li>
+		</operations>
+	</match>
+  </Operation>
+
+  <!-- RC1 Quernstone -->
+  <Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>RimCuisine 1.0</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName="ProcessGrain" or defName="ProcessGrainBulk"]/ingredients/li/filter/thingDefs</xpath>
+				<value>
+					<li>IAmHungry_RawWheat</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName="ProcessGrain" or defName="ProcessGrainBulk"]/fixedIngredientFilter/thingDefs</xpath>
+				<value>
+					<li>IAmHungry_RawWheat</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName="ProcessGrain" or defName="ProcessGrainBulk"]/defaultIngredientFilter/thingDefs</xpath>
+				<value>
+					<li>IAmHungry_RawWheat</li>
+				</value>
+			</li>
+		</operations>
+	</match>
+  </Operation>
+
+  <!-- Ingredients Lunch Pack -->
+  <Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>RimCuisine 1.0</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName="LunchPack_MealSurvival"]/ingredients/li[2]/filter/thingDefs</xpath>
+				<value>
+					<li>RawWheat</li>
+					<li>RawOats</li>
+					<li>RawBarley</li>
+				</value>
+			</li>
+		</operations>
+	</match>
+  </Operation>
+
+  <!-- Mod Support for VGP GG -->
+  <Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>VGP Garden Gourmet</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName="LunchPack_MealSurvival"]/ingredients/li[2]/filter/thingDefs</xpath>
+				<value>
+					<li>Rawwheat</li>
+				</value>
+			</li>
+		</operations>
+	</match>
+  </Operation>
+
+  <!-- Mod Support for VGP -->
+  <Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>VGP Vegetable Garden</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName="LunchPack_MealSurvival"]/ingredients/li[2]/filter/thingDefs</xpath>
+				<value>
+					<li>RawBarley</li>
+				</value>
+			</li>
+		</operations>
+	</match>
+  </Operation>
+
+  <!-- VGP Lunchpackage Apple -->
+  <Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>VGP Vegetable Garden</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName="LunchPack_MealSurvival"]/ingredients/li[4]/filter/categories</xpath>
+				<value>
+					<thingDefs>
+						<li>Rawapple</li>
+					</thingDefs>
+				</value>
+			</li>
+		</operations>
+	</match>
+  </Operation>
+
+  <!-- VGP Brewing -->
+  <Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>VGP Vegetable Garden</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName="BrewCoffee" or defName="BrewTea"]/recipeUsers</xpath>
+				<value>
+					<li>Trunken_Campfire</li>
+					<li>Bakery</li>
+				</value>
+			</li>
+		</operations>
+	</match>
+  </Operation>
+
+  <!-- VGP Meals -->
+  <Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>VGP Vegetable Garden</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName="Stirfrymeal" or defName="Cookstewpot"]/recipeUsers</xpath>
+				<value>
+					<li>Bakery</li>
+				</value>
+			</li>
+		</operations>
+	</match>
+  </Operation>
+
+  <!-- VGP Gloomy Bonfire -->
+  <Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>VGP Vegetable Garden</li>
+	</mods>
+	<match Class="PatchOperationFindMod">
+		<mods>
+			<li>GloomyFurniture</li>
+		</mods>
+		<success>Always</success>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="Stirfrymeal" or defName="Cookstewpot"]/recipeUsers</xpath>
+			<value>
+				<li>GL_Bonfire</li>
+			</value>
+		</match>
+	</match>
+  </Operation>
+
+  <!-- Mod Support for Rimstro -->
+  <Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>Rimstro</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName="RS_stove"]/recipes</xpath>
+				<value>
+					<li>LunchPack_MealSurvival</li>
+					<li>ProperMeal_Bread</li>
+					<li>ProperMeal_BakedGoods</li>
+					<li>ProperMeal_CookCheese</li>
+					<li>ProperMeal_Knuckle</li>
+					<li>ProperMeal_Haunch</li>
+					<li>ProperMeal_Steak</li>
+					<li>CookMealComplete</li>
+					<li>CookMealExquisite</li>
+					<li>CookMealSurvival</li>
+				</value>
+			</li>
+		</operations>
+	</match>
+  </Operation>
+  <!-- Rimstro Recipes -->
+  <Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>Rimstro</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName="Bakery"]/recipes</xpath>
+				<value>
+					<li>Cook_RS_Berrymilk</li>
+					<li>Cook_RS_chocomilk</li>
+					<li>Cook_RS_pudding</li>
+					<li>Cook_RS_fried_egg</li>
+					<li>Cook_RS_potatolatki</li>
+					<li>Cook_RS_eggjuk</li>
+				</value>
+			</li>
+		</operations>
+	</match>
+  </Operation>
+
+  <Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>Rimstro</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName="Trunken_Campfire"]/recipes</xpath>
+				<value>
+					<li>Cook_RS_mushroom_soup</li>
+					<li>Cook_RS_steak_deopbab</li>
+					<li>Cook_RS_thrumbo_steak</li>
+				</value>
+			</li>
+		</operations>
+	</match>
+  </Operation>
+
+  <!-- Give RS_popcorn some Buffs -->
+  <Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>Rimstro</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/RecipeDef[defName="Cook_RS_popcorn"]/products</xpath>
+				<value>
+					<products>
+					  <IAmHungry_Popcorn>1</IAmHungry_Popcorn>
+					</products>
+				</value>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/ThingDef[defName="RS_popcorn"]</xpath>
+			</li>
+		</operations>
+	</match>
+  </Operation>
+  <!-- Buff Microwave -->
+  <Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>Rimstro</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="RS_Microwave"]/statBases/WorkTableWorkSpeedFactor</xpath>
+				<value>
+					<WorkTableWorkSpeedFactor>4.0</WorkTableWorkSpeedFactor>
+				</value>
+			</li>
+		</operations>
+	</match>
+  </Operation>
+
+  <!-- Mod Support Real World Food Recipes -->
+  <Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>Real World Food</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName="Bakery"]/recipes</xpath>
+				<value>
+					<li>Make_Apple_Pie</li>
+					<li>Make_Apple_Pie_10</li>
+					<li>Make_Butter</li>
+					<li>Make_OliveOil</li>
+					<li>Make_Raman</li>
+					<li>Make_PanCake</li>
+					<li>Make_BoxOfPanCake</li>
+					<li>Make_BoxOfPanCake_X10</li>
+					<li>Thaw_Lunch_Boxes</li>
+				</value>
+			</li>
+		</operations>
+	</match>
+  </Operation>
+
+  <!-- RWF Flour  -->
+  <Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>Real World Food</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName="Millstone"]/recipes</xpath>
+				<value>
+					<li>Make_Flour_dough</li>
+					<li>Make_Flour_dough_10</li>
+				</value>
+			</li>
+		</operations>
+	</match>
+  </Operation>
+
+</Patch>

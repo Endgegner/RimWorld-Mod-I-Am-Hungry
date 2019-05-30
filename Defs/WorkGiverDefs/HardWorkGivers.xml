@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+<!-- Workgiver -->
+  <WorkGiverDef>
+	<defName>DoBillsMillstone</defName>
+	<label>mill raw food</label>
+	<giverClass>WorkGiver_DoBill</giverClass>
+	<workType>Cooking</workType>
+    <prioritizeSustains>true</prioritizeSustains>
+	<priorityInType>32</priorityInType>
+    <fixedBillGiverDefs>
+      <li>Millstone</li>
+    </fixedBillGiverDefs>
+	<verb>milling</verb>
+	<gerund>milling</gerund>
+	<requiredCapacities>
+      <li>Manipulation</li>
+	</requiredCapacities>
+ </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>DoBillsBakery</defName>
+    <label>cook meals at stove</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Cooking</workType>
+    <priorityInType>100</priorityInType>
+    <fixedBillGiverDefs>
+      <li>Bakery</li>
+    </fixedBillGiverDefs>
+    <verb>cook</verb>
+    <gerund>cooking at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>DoBillsStormfire</defName>
+    <label>cook meals at campfire</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Cooking</workType>
+    <priorityInType>97</priorityInType>
+    <fixedBillGiverDefs>
+      <li>Trunken_Campfire</li>
+    </fixedBillGiverDefs>
+    <verb>cook</verb>
+    <gerund>cooking at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+
+</Defs>

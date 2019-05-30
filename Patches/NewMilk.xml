@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  
+  <!-- Mod Support for New Milk -->
+  <Operation Class="PatchOperationFindMod">
+	<mods>
+		<li>Newmilk</li>
+	</mods>
+	<nomatch Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef[defName="Milk"]/graphicData/texPath</xpath>
+				<value>
+					<texPath>Things/Resource/Milk</texPath>
+				</value>
+			</li>
+			<!-- Make it sick -->
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName="Milk"]/graphicData</xpath>
+				<value>
+					<graphicClass>Graphic_StackCount</graphicClass>
+				</value>
+			</li>
+		</operations>
+	</nomatch>
+  </Operation>
+
+</Patch>
