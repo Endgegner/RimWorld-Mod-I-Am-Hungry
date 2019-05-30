@@ -13,7 +13,7 @@ Vanilla friendly Food with unique thoughts and tastes in a simplistic way.
 - Adds 12 recipes with different taste/effect
 - Adds 2 different kinds of processable plants to harvest
 
-*** Overview
+<h4>Overview</h4>
 
 - Delicious Food (Tastes)
 - Proper Meals (Thoughts+Hediffs)
