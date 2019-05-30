@@ -5,7 +5,7 @@ Version 1.0: Release
 
 Vanilla friendly Food with unique thoughts and tastes in a simplistic way.
 
-**** Yummy!
+<h3>Yummy!</h3>
 
 - Adds a stove with oven to cook (gloomy style)
 - Adds a fireplace to cook (lasting & warm)
@@ -33,7 +33,7 @@ Supports RimCuisine, Gloomy Furniture & Extra Kitchen!
 Works Hand in Hand with Rimstro, RealWorldFood, and VGP!
 Start at zero and learn how to cook, especially with Amnesia or Tech Primitives!
 
-*** Compatibility & Loadorder:
+<h3>Compatibility & Loadorder:</h3>
 
 1. Vegetarians
 2. Vanilla (Core only)
@@ -55,10 +55,12 @@ Included Patches are interactive and react to user decisions. Mods will only be 
 
 This mod supports every food mod out there!
 
-*** Artists<br>
+<h3>Artists</h3>
 8 (!) Food Textures * by Evaine<br>
 Wheat & Flour * by Crustypeanut<br>
 Milk * by AmIkoLo & gopeuni<br>
 Popcorn * by Latki & Lepple<br>
 
 Living Mods * by Trunken
+
+License: Ask first.
