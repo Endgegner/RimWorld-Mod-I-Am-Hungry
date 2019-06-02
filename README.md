@@ -3,14 +3,14 @@ Proper Meals: I Am Hungry [ENG] - A better food system for RimWorld
 
 <img src="https://camo.githubusercontent.com/1e4f97e52db576a793e373a27c2de38c026bb3f1/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f52696d776f726c642d312e302d677265656e2e737667" alt="Version" data-canonical-src="https://img.shields.io/badge/Rimworld-1.0-green.svg" style="max-width:100%;"></a>
 
-Version 1.0: Release
+Version 1.1: Rotatable Coocking Place added
 
 Vanilla friendly Food with unique thoughts and tastes in a simplistic way.
 
 <h3>Yummy!</h3>
 
-- Adds a stove with oven to cook (gloomy style)
-- Adds a fireplace to cook (lasting & warm)
+- Adds a campfire to cook (lasting & warm)
+- Adds a stove with oven to cook (vanilla style)
 - Adds a millstone with the Bakery
 - Adds 12 recipes with different taste/effect
 - Adds 2 different kinds of processable plants to harvest
@@ -59,6 +59,7 @@ This mod supports every food mod out there!
 
 <h3>Artists</h3>
 8 (!) Food Textures * by Evaine<br>
+Bakery * by Oskar Potocki
 Wheat & Flour * by Crustypeanut<br>
 Milk * by AmIkoLo & gopeuni<br>
 Popcorn * by Latki & Lepple<br>
