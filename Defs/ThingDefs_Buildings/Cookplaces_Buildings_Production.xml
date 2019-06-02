@@ -8,7 +8,7 @@
 		<thingClass>Building_WorkTable_HeatPush</thingClass>
 		<graphicData>
 			<texPath>Things/Building/Bakery</texPath>
-			<graphicClass>Graphic_Single</graphicClass> <!-- Multi -->
+			<graphicClass>Graphic_Multi</graphicClass>
 			<drawSize>(4,4)</drawSize>
 			<shaderType>CutoutComplex</shaderType>
 			<damageData>
@@ -18,7 +18,7 @@
 				<cornerBR>Damage/Corner</cornerBR>
 			</damageData>
 		</graphicData>
-		<rotatable>false</rotatable>
+		<rotatable>true</rotatable>
 		<uiIconPath>Things/Building/Bakery_MenuIcon</uiIconPath>
 		<castEdgeShadows>true</castEdgeShadows>
 		<staticSunShadowHeight>0.2</staticSunShadowHeight>		
@@ -48,7 +48,6 @@
 		<surfaceType>Item</surfaceType>
 		<recipes>
 			<li>LunchPack_MealSurvival</li>
-			<li>ProperMeal_Popcorn</li>
 			<li>ProperMeal_Bread</li>
 			<li>ProperMeal_BakedGoods</li>
 			<li>ProperMeal_CookCheese</li>

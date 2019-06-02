@@ -11,13 +11,13 @@
 
 Vanilla friendly food with unique thoughts and tastes in a simplistic way.
 
-- Adds a stove with oven to cook (gloomy style)
 - Adds a campfire to cook (lasting &amp; warm)
+- Adds a stove with oven to cook
+- Adds a millstone for the new Bakery
 - Adds 12 recipes with different taste/effect
 - Adds 2 different kinds of processable plants to harvest
 
 &lt;b&gt;Overview:&lt;/b&gt;
-
 - Delicious Food (Tastes)
 - Proper Meals (Thoughts+Hediffs)
 - Meat Preservation (Treatment)
@@ -53,10 +53,11 @@ Start at zero and learn how to cook, especially with Amnesia or Tech Primitives!
 14. Gloomy Vanilla (load this after)
 15. Savegames
 
-Included Patches are interactive and react to user decisions. Mods will only be combined, when found. Just load I Am Hungry after your other Food Mods to let it do its work. Prime example for a mod which makes use of all features and possibilities given by other mods in its category. This mod supports every food mod out there!
+Included Patches are interactive and react to user decisions. Mods will only be combined, when found. Just load I Am Hungry after your other Food Mods to let it do its work. Prime example for a mod which makes use of all features and possibilities given by other mods in its category, with no dependencies. This mod supports every food mod out there!
 
 &lt;b&gt;Artists&lt;/b&gt;
 8 (!) Food Textures * by Evaine
+Bakery * by Oskar Potocki
 Wheat &amp; Flour * by Crustypeanut
 Milk * by AmIkoLo &amp; gopeuni
 Popcorn * by Latki &amp; Lepple
